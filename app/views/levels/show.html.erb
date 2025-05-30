@@ -1,0 +1,9 @@
+<div class="space-y-4">
+  <% @pages.each do |page| %>
+    <div class="border-l-4 border-blue-500 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 shadow px-6 py-4 rounded hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors">
+      <h4 class="text-lg font-medium">
+        <%= link_to page.title, level_page_path(@level, page), class: "text-blue-700 dark:text-blue-300 hover:underline" %>
+      </h4>
+    </div>
+  <% end %>
+</div>

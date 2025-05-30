@@ -1,0 +1,10 @@
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <% @levels.each do |level| %>
+    <div class="bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 p-6 rounded shadow transition-colors">
+      <h3 class="text-xl font-semibold text-blue-700 dark:text-blue-300">
+        <%= link_to level.title, level_path(level), class: "hover:underline" %>
+      </h3>
+      <p class="text-sm"><%= level.description %></p>
+    </div>
+  <% end %>
+</div>

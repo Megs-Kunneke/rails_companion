@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rails Companion</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body id="app-body" class="bg-gray-100 text-gray-900 font-sans antialiased min-h-screen dark:bg-gray-900 dark:text-gray-100 transition-colors">
+    <header class="bg-white dark:bg-gray-800 shadow transition-colors">
+      <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+        <a href="/" class="text-xl font-bold text-blue-600 dark:text-blue-400 hover:underline transition-colors">Rails Companion</a>
+
+        <ul class="flex space-x-6 text-sm items-center">
+          <li>
+            <%= link_to "Home", root_path, class: "hover:text-blue-600 dark:hover:text-blue-300 transition-colors" %>
+          </li>
+          <li>
+            <%= link_to "Levels", levels_path, class: "hover:text-blue-600 dark:hover:text-blue-300 transition-colors" %>
+          </li>
+          <li>
+            <button id="darkModeToggle" class="text-xl transition-colors hover:text-yellow-500 dark:hover:text-white" title="Toggle dark mode">
+              🌙
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+      <%= yield %>
+    </main>
+  </body>
+</html>

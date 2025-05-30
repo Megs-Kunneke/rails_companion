@@ -1,0 +1,11 @@
+<article class="prose dark:prose-invert max-w-none transition-colors">
+  <h1 class="text-3xl font-bold mb-4"><%= @page.title %></h1>
+
+  <div class="text-gray-800 dark:text-gray-100 leading-relaxed">
+    <%= simple_format(@page.content) %>
+  </div>
+</article>
+
+<p class="mt-6">
+  <%= link_to "← Back to #{@level.title}", level_path(@level), class: "text-blue-600 dark:text-blue-300 hover:underline text-sm" %>
+</p>
